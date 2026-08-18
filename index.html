@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>河內・下龍灣 家族旅遊行程 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #1A0B0E;                       
+  --panel: rgba(45, 18, 23, 0.75);
+  --card-bg: #281216;                   
+  --card-border: rgba(234, 179, 8, 0.25); 
+  --accent-crimson: #991B1B;            
+  --accent-gold: #EAB308;               
+  --accent-gold-bright: #FDE047;        
+  --accent-teal: #2DD4BF;               
+  --accent-red: #F87171;
+  --text-main: #FFFBEB;                 
+  --text-sub: #D1D5DB;                  
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background-color: var(--bg);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(153, 27, 27, 0.35) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(234, 179, 8, 0.18) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: 'Noto Sans TC', 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.6;
+  padding-bottom: 60px;
+}
+
+.header {
+  text-align: center;
+  padding: 40px 20px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent-gold-bright), #EF4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 10px rgba(234, 179, 8, 0.2);
+}
+.header p { color: var(--text-sub); font-size: 0.95rem; }
+
+/* Sticky Nav Bar */
+.nav-container {
+  position: sticky;
+  top: 12px;
+  z-index: 100;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  padding: 0 16px;
+}
+.nav-tabs {
+  display: flex;
+  gap: 8px;
+  background: rgba(26, 11, 14, 0.9);
+  backdrop-filter: blur(12px);
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid var(--card-border);
+  overflow-x: auto;
+  scrollbar-width: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+.nav-tabs::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex: 0 0 auto;
+  padding: 10px 18px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-sub);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.tab-btn.active {
+  background: linear-gradient(135deg, var(--accent-gold), #CA8A04);
+  color: #1A0B0E;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(234, 179, 8, 0.4);
+  border-color: var(--accent-gold-bright);
+}
+
+.container { max-width: 900px; margin: 0 auto; padding: 0 16px; }
+
+/* Panel System */
+.panel { display: none; animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+.panel.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Section Title & Tags */
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent-gold-bright);
+}
+.hotel-tag {
+  background: rgba(234, 179, 8, 0.12);
+  color: var(--accent-gold-bright);
+  border: 1px solid rgba(234, 179, 8, 0.3);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.alert-box {
+  background: rgba(153, 27, 27, 0.25);
+  border-left: 4px solid var(--accent-crimson);
+  border-right: 1px solid rgba(234, 179, 8, 0.2);
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #FECACA;
+}
+
+/* Timeline & Card Alignment Styles (照片對齊修正重點) */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  align-items: stretch;
+}
+
+.card-img-wrapper {
+  flex: 0 0 240px;
+  width: 240px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.card-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.time-badge {
+  display: inline-block;
+  background: rgba(45, 212, 191, 0.15);
+  color: var(--accent-teal);
+  border: 1px solid rgba(45, 212, 191, 0.3);
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-gold-bright);
+  margin-bottom: 6px;
+}
+
+.card-desc {
+  font-size: 0.92rem;
+  color: var(--text-sub);
+}
+
+.food-info {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.25);
+  border-left: 3px solid var(--accent-gold);
+  border-radius: 4px;
+  font-size: 0.88rem;
+}
+
+.btn-map {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(234, 179, 8, 0.15);
+  color: var(--accent-gold-bright);
+  border: 1px solid rgba(234, 179, 8, 0.4);
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  align-self: flex-start;
+}
+.btn-map:hover {
+  background: var(--accent-gold);
+  color: #1A0B0E;
+}
+
+/* Grid Cards for Overview */
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.ov-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+.ov-card h3 { color: var(--accent-gold-bright); margin-bottom: 8px; }
+
+/* Checklist & Rules Specific Styles */
+.checklist-group {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+.checklist-group h3 {
+  font-size: 1.1rem;
+  color: var(--accent-gold-bright);
+  border-bottom: 1px solid rgba(234, 179, 8, 0.2);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(255,255,255,0.08);
+}
+.check-item:last-child { border-bottom: none; }
+.check-item input[type="checkbox"] {
+  accent-color: var(--accent-gold);
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  cursor: pointer;
+}
+.check-title { font-weight: 700; font-size: 0.95rem; color: var(--text-main); }
+.check-sub { font-size: 0.85rem; color: var(--text-sub); margin-top: 2px; }
+.check-links { margin-top: 6px; font-size: 0.85rem; }
+.check-links a { color: var(--accent-teal); text-decoration: none; margin-right: 12px; }
+.check-links a:hover { text-decoration: underline; }
+
+.rule-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-left: 4px solid var(--accent-gold);
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: var(--radius);
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.rule-num {
+  background: linear-gradient(135deg, var(--accent-gold), #CA8A04);
+  color: #1A0B0E;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.rule-text { font-size: 0.95rem; color: var(--text-main); font-weight: 500; }
+
+/* 響應式手機版調整 */
+@media (max-width: 640px) {
+  .card { 
+    flex-direction: column; 
+  }
+  .card-img-wrapper { 
+    flex: none;
+    width: 100%; 
+    height: 200px; 
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🇻🇳 2026 河內・下龍灣家族之旅</h1>
+  <p>5 天 4 夜精華行程表 · 完整路線與景點寫真</p>
+</div>
+
+<div class="nav-container">
+  <div class="nav-tabs" id="navTabs">
+    <button class="tab-btn active" onclick="switchTab('overview')">總覽</button>
+    <button class="tab-btn" onclick="switchTab('day1')">D1 8/21</button>
+    <button class="tab-btn" onclick="switchTab('day2')">D2 8/22</button>
+    <button class="tab-btn" onclick="switchTab('day3')">D3 8/23</button>
+    <button class="tab-btn" onclick="switchTab('day4')">D4 8/24</button>
+    <button class="tab-btn" onclick="switchTab('day5')">D5 8/25</button>
+    <button class="tab-btn" onclick="switchTab('checklist')">📋 行前清單</button>
+    <button class="tab-btn" onclick="switchTab('rules')">📜 旅遊守則</button>
+    <button class="tab-btn" onclick="switchTab('more')">備案與伴手禮</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- OVERVIEW -->
+  <div id="overview" class="panel active">
+    <h2 class="section-title">行程路線總覽</h2>
+    <div class="grid-2">
+      <div class="ov-card">
+        <h3>Day 1 (8/21 五)</h3>
+        <p><b>主題：</b>抵達河內・老城區・教堂・火車街</p>
+        <p style="color:var(--text-sub); font-size:0.88rem; margin-top:6px;">住宿：河內訂製時尚飯店 Bespoke Trendy Hotel</p>
+      </div>
+      <div class="ov-card">
+        <h3>Day 2 (8/22 六)</h3>
+        <p><b>主題：</b>Klook 下龍灣一日遊 & 米其林推薦饗宴</p>
+        <p style="color:var(--text-sub); font-size:0.88rem; margin-top:6px;">住宿：河內訂製時尚飯店 Bespoke Trendy Hotel</p>
+      </div>
+      <div class="ov-card">
+        <h3>Day 3 (8/23 日)</h3>
+        <p><b>主題：</b>換住宿・老城區散步・火爐監獄・Pizza 4P's・Hanoi Spa</p>
+        <p style="color:var(--text-sub); font-size:0.88rem; margin-top:6px;">住宿：Airbnb（P. Tôn Thất Thiệp 周邊）</p>
+      </div>
+      <div class="ov-card">
+        <h3>Day 4 (8/24 一)</h3>
+        <p><b>主題：</b>市區歷史文化遺產巡禮・水上木偶戲・La Belle Spa</p>
+        <p style="color:var(--text-sub); font-size:0.88rem; margin-top:6px;">住宿：Airbnb（P. Tôn Thất Thiệp 周邊）</p>
+      </div>
+      <div class="ov-card">
+        <h3>Day 5 (8/25 二)</h3>
+        <p><b>主題：</b>悠閒早晨・自由活動・專車送機</p>
+        <p style="color:var(--text-sub); font-size:0.88rem; margin-top:6px;">住宿：無（溫暖的家）</p>
+      </div>
+    </div>
+
+    <!-- 互動式 Checklist 待預約區塊 -->
+    <div class="checklist-group" style="margin-top: 24px;">
+      <h3>⏳ 預約與訂位待確認事項</h3>
+      
+      <div class="check-item">
+        <input type="checkbox" id="todo1" onchange="saveCheckState('todo1')">
+        <label for="todo1">
+          <div class="check-title">📌 第一天按摩店預約</div>
+        </label>
+      </div>
+
+      <div class="check-item">
+        <input type="checkbox" id="todo2" onchange="saveCheckState('todo2')">
+        <label for="todo2">
+          <div class="check-title">📌 4P's Pizza pre-orders（至少兩天前）</div>
+        </label>
+      </div>
+
+      <div class="check-item">
+        <input type="checkbox" id="todo3" onchange="saveCheckState('todo3')">
+        <label for="todo3">
+          <div class="check-title">📌 第三天按摩店預約</div>
+        </label>
+      </div>
+
+      <div class="check-item">
+        <input type="checkbox" id="todo4" onchange="saveCheckState('todo4')">
+        <label for="todo4">
+          <div class="check-title">📌 第四天按摩店預約</div>
+        </label>
+      </div>
+
+      <div class="check-item">
+        <input type="checkbox" id="todo5" onchange="saveCheckState('todo5')">
+        <label for="todo5">
+          <div class="check-title">📌 水上木偶戲訂票（需提早兩天）</div>
+        </label>
+      </div>
+
+      <div class="check-item">
+        <input type="checkbox" id="todo6" onchange="saveCheckState('todo6')">
+        <label for="todo6">
+          <div class="check-title">📌 送機資訊確認</div>
+        </label>
+      </div>
+
+      <div class="check-item">
+        <input type="checkbox" id="todo7" onchange="saveCheckState('todo7')">
+        <label for="todo7">
+          <div class="check-title">📌 下龍灣當日資訊確認</div>
+        </label>
+      </div>
+
+      <div class="check-item">
+        <input type="checkbox" id="todo8" onchange="saveCheckState('todo8')">
+        <label for="todo8">
+          <div class="check-title">📌 Met 餐廳預約（Met reservation）</div>
+        </label>
+      </div>
+
+      <div class="check-item">
+        <input type="checkbox" id="todo9" onchange="saveCheckState('todo9')">
+        <label for="todo9">
+          <div class="check-title">📌 Bếp Prime 餐廳預約（Bếp Prime reservation）</div>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 1 -->
+  <div id="day1" class="panel">
+    <h2 class="section-title">Day 1：8/21（五）啟程！抵達河內 & 老城區初探</h2>
+    <div class="hotel-tag">🏡 住宿：Bespoke Trendy Hotel Hanoi (P. Ấu Triệu 周邊)</div>
+    
+    <div class="timeline">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="抵達河內">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">14:00 – 16:00</span>
+            <h3 class="card-title">抵達河內內排機場 (HAN) & 前往飯店 Check-in</h3>
+            <p class="card-desc">預計 14:00 降落，辦理入境手續與提領行李，隨後搭乘預約接陸專車前往 Bespoke Trendy Hotel 辦理入住與會合。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://bespokehotels.vn/trendyhn/wp-content/uploads/2022/11/Suite01-1.jpg" alt="飯店照片">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">16:00 – 17:00</span>
+            <h3 class="card-title">Bespoke Trendy Hotel Check-in & 進房休息</h3>
+            <p class="card-desc">安頓行李、稍作休息整理，準備展開河內老城區巡禮。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/St._Joseph%27s_Cathedral_-_50129126751.jpg/800px-St._Joseph%27s_Cathedral_-_50129126751.jpg" alt="聖若瑟大教堂與三十六古街">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">16:00 – 18:00</span>
+            <h3 class="card-title">聖若瑟大教堂、三十六古街 & 老城區漫遊</h3>
+            <p class="card-desc">參觀擁有哥德式建築風格的聖若瑟主教堂，體驗濃厚的法式風情，隨後穿梭於古色古香的三十六古街巷弄採買與品嚐在地小吃。</p>
+            <div class="food-info">
+              🍲 <b>周邊推薦：</b>Phở 10 Lý Quốc Sư（牛肉河粉）、Bánh Gối Gốc Đa（炸枕頭餅）、Cộng Cà Phê（椰奶咖啡）
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
+            <a href="https://www.google.com/maps/search/?api=1&query=St.+Joseph's+Cathedral+Hanoi" target="_blank" class="btn-map">📍 聖若瑟大教堂地圖</a>
+            <a href="https://viet-go.com/attractions/hanoi-oldquarter-36-streets" target="_blank" class="btn-map">🔗 36古街簡介</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://lilystravelagency.tw/wp-content/uploads/2025/12/1-mo-bai-6.jpg" alt="火車街照片">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">18:00 – 19:00</span>
+            <h3 class="card-title">河內火車街 (Hanoi Train Street)</h3>
+            <p class="card-desc">體驗火車穿梭窄巷的獨特奇景，並可在鐵道旁咖啡館享用特色越式蛋咖啡。</p>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Hanoi+Train+Street" target="_blank" class="btn-map">📍 火車街 Google 地圖</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Met Vietnamese Restaurant 美食">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">18:00 – 20:30</span>
+            <h3 class="card-title">老城區晚餐 ＆ 河內夜市散步</h3>
+            <p class="card-desc">享用越式風味晚餐，餐後可前往河內週末夜市體驗在地熱鬧夜生活。</p>
+            <div class="food-info">🍴 <b>晚餐指定：</b>Met Vietnamese Restaurant（經典越式連鎖餐廳）</div>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Met+Vietnamese+Restaurant+Hanoi" target="_blank" class="btn-map">📍 Met 餐廳地圖</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Orient Spa Hanoi">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">20:30 – 晚間</span>
+            <h3 class="card-title">Orient Spa 按摩 & 越式洗髮</h3>
+            <p class="card-desc">為全家人預約舒壓療程。隔天清晨需早起出發下龍灣，建議適時休息。</p>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Orient+Spa+Hanoi" target="_blank" class="btn-map">📍 Orient Spa 地址與導航</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div id="day2" class="panel">
+    <h2 class="section-title">Day 2：8/22（六）下龍灣世界遺產 & 米其林推薦饗宴</h2>
+    <div class="hotel-tag">🏨 住宿：河內訂製時尚飯店 Bespoke Trendy Hotel</div>
+
+    <div class="timeline">
+      <div class="card" style="display: block; padding: 20px;">
+        <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px;">
+          <div class="card-img-wrapper" style="border-radius: 12px; height: 180px;">
+            <img class="card-img" src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="下龍灣景色">
+          </div>
+          <div class="card-content" style="padding: 0; flex: 1; min-width: 280px;">
+            <div>
+              <span class="time-badge">07:45 – 20:45</span>
+              <h3 class="card-title">Aurora Halong Cruises 極光號奢華一日遊</h3>
+              <p class="card-desc">專車飯店接送，搭乘豪華極光號郵輪，含自助午餐、驚訝洞、英雄島俯瞰全景、獨木舟/竹筏體驗與甲板日落派對。</p>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Ha+Long+Bay" target="_blank" class="btn-map" style="margin-top: 12px;">📍 下龍灣位置地圖</a>
+          </div>
+        </div>
+
+        <h3 style="color: var(--accent-gold); margin-bottom: 16px; font-size: 1.1rem; display: flex; align-items: center; gap: 8px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">
+          🗓️ DETAILS ITINERARY OF AURORA HALONG CRUISES（極光號詳細行程）
+        </h3>
+
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.92rem; color: #E2E8F0; text-align: left;">
+            <thead>
+              <tr style="background: rgba(20, 184, 166, 0.2); color: #99F6E4; border-bottom: 2px solid rgba(20, 184, 166, 0.4);">
+                <th style="padding: 10px; width: 110px; white-space: nowrap;">時間</th>
+                <th style="padding: 10px; width: 170px;">行程項目</th>
+                <th style="padding: 10px;">詳細內容描述</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <td style="padding: 10px; font-weight: bold; color: var(--accent-gold);">07:45 – 08:15</td>
+                <td style="padding: 10px; font-weight: bold;">河內接送服務</td>
+                <td style="padding: 10px;">豪華接駁巴士至河內老城區飯店接您，經新高速公路前往下龍灣（車程約 2.5 小時）。<br><span style="color: #94A3B8; font-size: 0.85rem;">＊住老城區外者請於 08:15 至河內歌劇院集合。</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02);">
+                <td style="padding: 10px; font-weight: bold; color: var(--accent-gold);">10:30 – 10:45</td>
+                <td style="padding: 10px; font-weight: bold;">途中中途休息</td>
+                <td style="padding: 10px;">前往下龍灣途中停留 20–25 分鐘讓大家下車稍作休息。</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <td style="padding: 10px; font-weight: bold; color: var(--accent-gold);">11:30 – 11:45</td>
+                <td style="padding: 10px; font-weight: bold;">登船歡迎儀式</td>
+                <td style="padding: 10px;">抵達下龍國際郵輪碼頭（Halong International Port）登上 <b>Aurora Halong Cruises 極光號</b>。享用迎賓飲料並聽取郵輪經理說明安全須知與今日行程。</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02);">
+                <td style="padding: 10px; font-weight: bold; color: var(--accent-gold);">12:00 – 13:15</td>
+                <td style="padding: 10px; font-weight: bold;">船上自助午餐</td>
+                <td style="padding: 10px;">享用豐盛的自助午餐，品嚐在地特色美食與新鮮海鮮。郵輪將航行於石灰岩島嶼與翡翠海面之間，途中可觀賞詩山、烏龜島、人頭島等。</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <td style="padding: 10px; font-weight: bold; color: var(--accent-gold);">13:15 – 14:15</td>
+                <td style="padding: 10px; font-weight: bold;">參觀驚訝洞 (Sung Sot Cave)</td>
+                <td style="padding: 10px;">參觀下龍灣最著名且壯觀的溶洞。於 1901 年由法國探險家發現，命名為 "Grotte des Surprises"（驚訝之洞）。</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02);">
+                <td style="padding: 10px; font-weight: bold; color: var(--accent-gold);">14:30 – 15:15</td>
+                <td style="padding: 10px; font-weight: bold;">探索穿洞 (Luon Cave) / 划舟</td>
+                <td style="padding: 10px;">穿越被懸崖與植被包圍的穿洞潟湖。可選擇<b>搭乘當地人代划的竹筏</b>或<b>親自划獨木舟 (Kayak)</b>。</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <td style="padding: 10px; font-weight: bold; color: var(--accent-gold);">15:30 – 16:30</td>
+                <td style="padding: 10px; font-weight: bold;">遊覽英雄島 (Titop Island)</td>
+                <td style="padding: 10px;">下龍灣最熱門停靠點之一，以絕美的全景視野（可登頂俯瞰下龍灣全景）與美麗沙灘聞名。</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02);">
+                <td style="padding: 10px; font-weight: bold; color: var(--accent-gold);">16:45</td>
+                <td style="padding: 10px; font-weight: bold;">日落派對與音樂歡樂時光</td>
+                <td style="padding: 10px;">在露天甲板參加 Sunset Party！享用 Happy Hour 飲料、聆聽音樂，欣賞映照於翡翠海面上的夕陽金黃餘暉，隨後返航回碼頭。</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <td style="padding: 10px; font-weight: bold; color: var(--accent-gold);">17:45 – 18:00</td>
+                <td style="padding: 10px; font-weight: bold;">離船與返程河內</td>
+                <td style="padding: 10px;">郵輪返抵碼頭，向船員道別後搭乘專屬接駁巴士返回河內。</td>
+              </tr>
+              <tr style="background: rgba(255,255,255,0.02);">
+                <td style="padding: 10px; font-weight: bold; color: var(--accent-gold);">20:30 – 20:45</td>
+                <td style="padding: 10px; font-weight: bold;">送達河內飯店</td>
+                <td style="padding: 10px;">巴士將您安全送回河內原入住飯店，結束下龍灣一日遊行程。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://tenjo.tw/wp-content/uploads/2026/01/DSC_4902.jpg" alt="Bếp Prime 餐廳">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">21:00 – 22:30</span>
+            <h3 class="card-title">晚餐：Bếp Prime（米其林指南推薦越式料理）</h3>
+            <p class="card-desc">越南河內越式餐廳推薦！米其林推薦美食，必點招牌火焰雞火鍋與精緻經典菜色。</p>
+            <div class="food-info">🍴 <b>特色推薦：</b>精緻越式創意菜、炭烤料理、特色春捲</div>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
+            <a href="https://tenjo.tw/bepprime/" target="_blank" class="btn-map">📖 觀看 Bếp Prime 完整食記簡介</a>
+            <a href="https://www.google.com/search?q=B%E1%BA%BFp+Prime" target="_blank" class="btn-map">📍 Google 搜尋與定位</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div id="day3" class="panel">
+    <h2 class="section-title">Day 3：8/23（日）換宿、老城區散步 & 法式風情與購物</h2>
+    <div class="hotel-tag">🏡 住宿：Airbnb (P. Tôn Thất Thiệp 周邊)</div>
+    
+    <div class="alert-box">⚠️ 提醒：Pizza 4P's 已預約 18:00！人數較多請提前 Pre-order；宵夜場 Hanoi Spa 建議提前預約。</div>
+
+    <div class="timeline">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=600&q=80" alt="Airbnb 換宿">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">10:00 – 11:00</span>
+            <h3 class="card-title">飯店退房 & 前往 Airbnb 寄放行李</h3>
+            <p class="card-desc">辦理 Bespoke Trendy Hotel 退房，搭車前往 P. Tôn Thất Thiệp 周邊的 Airbnb 寄放行李與會合。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://i.happylee.blog/Publish/2024/02/72135EA6-A1E4-4AA3-A50D-29260D199784.jpeg" alt="老城區在地小吃">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">11:30 – 13:00</span>
+            <h3 class="card-title">午餐：老城區在地小吃巡禮</h3>
+            <p class="card-desc">於老城區周邊享用傳統在地小吃，體驗最道地的河內飲食文化。</p>
+            <div class="food-info">🍲 <b>推薦體驗：</b>Bún Chả（烤肉米線）、Bánh Cuốn（越式蒸粉卷）、鴨肉粉</div>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
+            <a href="https://april-travel-blog.com/%E8%B6%8A%E5%8D%97%E7%BE%8E%E9%A3%9F/" target="_blank" class="btn-map">📖 老城區美食小吃攻略</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://cdn.viet-go.com/public/images/attractions/4/6a817052-a419-438f-9b36-dffc3fd378a3_desktop.webp" alt="還劍湖玉山祠">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">13:15 – 14:30</span>
+            <h3 class="card-title">還劍湖 ＆ 玉山祠 (Ngoc Son Temple)</h3>
+            <p class="card-desc">漫步還劍湖畔，穿過經典的紅色棲旭橋參訪湖中的玉山祠，感受市中心的寧靜氛圍。</p>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Ngoc+Son+Temple+Hanoi" target="_blank" class="btn-map">📍 玉山祠 Google 地圖</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://lilystravelagency.tw/wp-content/uploads/2024/10/image1-7.jpg" alt="火爐監獄博物館">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">14:45 – 16:00</span>
+            <h3 class="card-title">火爐監獄博物館 (Hoa Lo Prison)</h3>
+            <p class="card-desc">深入了解越南近現代史與法國殖民時期的牢房原貌。</p>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
+            <a href="https://lilystravelagency.tw/huolu-jianyu/" target="_blank" class="btn-map">📖 火爐監獄導覽與攻略</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Hoa+Lo+Prison+Relic" target="_blank" class="btn-map">📍 火爐監獄 Google 地圖</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Hanoi_Opera_House%2C_24_December_2016.jpg/800px-Hanoi_Opera_House%2C_24_December_2016.jpg" alt="河內歌劇院與法國區">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">16:15 – 17:50</span>
+            <h3 class="card-title">法國殖民區散步、河內歌劇院 & Uniqlo Hoàn Kiếm 逛街</h3>
+            <p class="card-desc">欣賞法國殖民區的新古典主義建築與河內歌劇院外貌，並順路前往附近的 Uniqlo Hoàn Kiếm 旗艦店逛逛，最後步行至 Pizza 4P's。</p>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
+            <a href="https://www.google.com/maps/search/?api=1&query=Hanoi+Opera+House" target="_blank" class="btn-map">📍 河內歌劇院地圖</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=UNIQLO+Hoan+Kiem+Hanoi" target="_blank" class="btn-map">📍 Uniqlo Hoàn Kiếm 地圖</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" alt="Pizza 4P's">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">18:00 – 19:30</span>
+            <h3 class="card-title">晚餐：Pizza 4P's Tràng Tiền (已預約 18:00)</h3>
+            <p class="card-desc">位於歌劇院旁！招牌自製鮮布拉塔起司（Burrata Cheese）與蟹肉義大利麵必點！</p>
+            <div class="food-info">🍕 <b>預約提示：</b>人數較多請務必先透過系統完成線上 Pre-order 點餐。</div>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
+            <a href="https://2p4c.tw/world/asia-world-travel/vietnam-travel/%E3%80%902026%E8%B6%8A%E5%8D%97%E5%BF%85%E5%90%83%E3%80%91pizza-4ps-%E8%A8%82%E4%BD%8D%EF%BC%8B%E5%BF%85%E9%BB%9E%E8%8F%9C%E8%89%B2%E9%96%8B%E7%AE%B1%EF%BC%88%E6%B2%B3%E5%85%A7-%E5%B3%B4%E6%B8%AF/" target="_blank" class="btn-map">📖 Pizza 4P's 訂位與必點菜色攻略</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Pizza+4P's+Trang+Tien" target="_blank" class="btn-map">📍 Google 地圖定位</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Hanoi Spa 按摩洗頭">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">20:30 – 22:30</span>
+            <h3 class="card-title">夜間放鬆：Hanoi Spa (按摩 / 越式草本洗頭)</h3>
+            <p class="card-desc">Google 評價極高！營業至凌晨 01:00，距離住宿處步行約 7 分鐘即可抵達，非常適合排在晚餐或散步後的放鬆行程。</p>
+            <div class="food-info">💆‍♀️ <b>營業資訊：</b>營業至凌晨 01:00｜評價超高｜距住宿步行約 7 分鐘</div>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Hanoi+Spa" target="_blank" class="btn-map">📍 Hanoi Spa Google 地圖導航</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div id="day4" class="panel">
+    <h2 class="section-title">Day 4：8/24（一）歷史文化遺產 & 水上木偶戲精華巡禮</h2>
+    <div class="hotel-tag">🏡 住宿：Airbnb (P. Tôn Thất Thiệp 周邊)</div>
+    <div class="alert-box">⚠️ 提醒：水上木偶戲需提前劃位；週一胡志明紀念堂內部公休，於外圍巴亭廣場參觀拍照。</div>
+    
+    <div class="timeline">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://lilystravelagency.tw/wp-content/uploads/2024/10/image9.png" alt="巴亭廣場 & 胡志明紀念堂">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">09:30 – 10:30</span>
+            <h3 class="card-title">巴亭廣場 & 胡志明紀念堂（外圍拍照）</h3>
+            <p class="card-desc">欣賞宏偉的國家級廣場與胡志明紀念堂建築外觀，感受肅穆莊嚴的歷史氣氛。</p>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Ho+Chi+Minh+Mausoleum" target="_blank" class="btn-map">📍 開啟 Google 地圖</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://www.vietnamairlines.com/tw/zh-tw/plan-book/travel/travel-guide/imperial-citadel-of-thang-long/_jcr_content/root/maincontent/container/container_911134791/container_1490556511/container_2051784589/image-10-0.coreimg.85.1600.png/1763424374303/hoang-thanh-thang-long-co-dien-tich-gan-20-ha-nam-trung-tam-ha-noi.png" alt="昇龍皇城">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">10:30 – 12:00</span>
+            <h3 class="card-title">昇龍皇城 (Imperial Citadel of Thang Long)</h3>
+            <p class="card-desc">UNESCO 世界文化遺產！從巴亭廣場步行約 8–10 分鐘即達端門，參觀敬天殿遺址與地下指揮所。</p>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
+            <a href="https://jimmraz.pixnet.net/blog/posts/3048806793" target="_blank" class="btn-map">📖 昇龍皇城導覽與攻略</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Imperial+Citadel+of+Thang+Long" target="_blank" class="btn-map">📍 開啟 Google 地圖</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=600&q=80" alt="越式雞肉河粉">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">12:15 – 13:30</span>
+            <h3 class="card-title">午餐：Phở Đinh - Quán phở gà đồi（山雞肉河粉）</h3>
+            <p class="card-desc">在地人極力推薦的道地雞肉河粉！湯頭清甜鮮美，選用肉質緊實的山雞肉，搭配特製醬汁非常過癮。</p>
+            <div class="food-info">🍲 <b>必點推薦：</b>Phở Gà Đồi（山雞肉河粉）、加點炸油條蘸湯享用</div>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Pho+Dinh+Quan+pho+ga+doi+Hanoi" target="_blank" class="btn-map">📍 Phở Đinh Google 地圖</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://lilystravelagency.tw/wp-content/uploads/2024/10/image6-13.jpg" alt="文廟國子監">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">13:45 – 15:30</span>
+            <h3 class="card-title">文廟國子監 (Temple of Literature)</h3>
+            <p class="card-desc">越南第一所國立大學，建於 1070 年。參觀進士碑林與奎文閣，古色古香且庭園平坦非常適合漫步。</p>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Temple+of+Literature+Hanoi" target="_blank" class="btn-map">📍 開啟 Google 地圖</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://media-cdn.tripadvisor.com/media/photo-s/0d/b4/3b/5d/bun-cha-hang-manh-hanoi.jpg" alt="烤肉米線">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">18:00 – 19:30</span>
+            <h3 class="card-title">晚餐：Bún Chả Đắc Kim（經典烤肉米線）</h3>
+            <p class="card-desc">河內最知名的烤肉米線老店之一！炭烤豬肉排香氣四溢，搭配新鮮生菜、米線與香酥炸春捲，份量十足。</p>
+            <div class="food-info">🍢 <b>招牌必點：</b>Bún Chả（烤肉米線）、Nem Cua Bể（炸海鮮蟹肉春捲）</div>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Bun+Cha+Dac+Kim" target="_blank" class="btn-map">📍 Bún Chả Đắc Kim Google 地圖</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://cdn.viet-go.com/public/images/attractions/7/783651a6-4ad1-48c3-87b3-8eb6965c52a1_desktop.webp" alt="水上木偶戲">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">20:00 – 21:00</span>
+            <h3 class="card-title">昇龍水上木偶戲 (Thang Long Water Puppet Theater)</h3>
+            <p class="card-desc">越南傳統國寶級表演！以水面為舞台，結合現場傳統樂器伴奏，呈現農村生活與民間神話故事（請提早 20 分鐘入場）。</p>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Thang+Long+Water+Puppet+Theater" target="_blank" class="btn-map">📍 劇場 Google 地圖</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="La Belle Spa 按摩洗頭">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">21:15 – 23:00</span>
+            <h3 class="card-title">深夜舒壓：La Belle Spa (全身按摩 / 越式洗頭)</h3>
+            <p class="card-desc">看完水上木偶戲後的最佳去處！營業至凌晨 02:30，高評價頂級服務，距離住宿處步行約 10 分鐘，輕鬆消除整天步行的疲勞。</p>
+            <div class="food-info">💆‍♀️ <b>營業資訊：</b>營業至凌晨 02:30｜評價極高｜距住宿步行約 10 分鐘</div>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=La+Belle+Spa+Hanoi" target="_blank" class="btn-map">📍 La Belle Spa Google 地圖導航</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 5 -->
+  <div id="day5" class="panel">
+    <h2 class="section-title">Day 5：8/25（二）樂天中心自由活動 & 專車送機</h2>
+    <div class="hotel-tag">✈️ 回程航班：18:15 起飛（14:30 專車接送前往機場）</div>
+    <div class="timeline">
+      <div class="card" style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <div class="card-img-wrapper" style="border-radius: 12px; height: 180px;">
+            <img class="card-img" src="https://www.lottecenter.com.vn/wp-content/themes/coralis/images/home/img/T%C3%B2a%20Nh%C3%A0%20Lotte%201.jpg" alt="Hanoi Lotte Center">
+          </div>
+          <div class="card-content" style="padding:0; flex: 1; min-width: 280px;">
+            <div>
+              <span class="time-badge">08:30 – 13:00</span>
+              <h3 class="card-title">最後採買：Hanoi Lotte Center 樂天超市</h3>
+              <p class="card-desc">搭車前往 Hanoi Lotte Center，於地下樂天超市一次買齊所有越南特色伴手禮。環境乾淨明亮、價格透明且可刷卡結帳，比起傳統市場更舒適輕鬆，非常適合行程最後一天大採購！</p>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Lotte+Center+Hanoi" target="_blank" class="btn-map" style="margin-top: 12px;">📍 Lotte Center Google 地圖</a>
+          </div>
+        </div>
+
+        <div style="background: rgba(20, 184, 166, 0.08); border: 1px solid rgba(20, 184, 166, 0.2); border-radius: 12px; padding: 16px; margin-top: 8px;">
+          <div style="color: var(--accent-teal); font-weight: bold; font-size: 1.05rem; margin-bottom: 8px;">
+            🛍️ Lotte Center / Lotte West Lake Mall 推薦伴手禮清單
+          </div>
+          
+          <div style="color: #99F6E4; font-size: 0.9rem; margin-bottom: 12px; line-height: 1.5;">
+            💡 <b>貼心提醒：</b>超市出口處貼心提供<b>免費的紙箱、膠帶與打包工具</b>，方便直接打包裝箱攜帶回國或放入行李託運。
+          </div>
+
+          <div class="grid-2" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
+            <div style="background: rgba(0,0,0,0.2); padding: 10px 12px; border-radius: 8px;">
+              <b style="color: var(--accent-gold);">☕️ 越南咖啡：</b>
+              <ul style="margin: 4px 0 0 16px; padding: 0; font-size: 0.88rem; color: #E2E8F0;">
+                <li>中原 G7 沖泡咖啡</li>
+                <li>Archcafe 椰子風味咖啡</li>
+                <li>Mr. Viet 濃縮咖啡豆與越南滴漏濾杯</li>
+              </ul>
+            </div>
+
+            <div style="background: rgba(0,0,0,0.2); padding: 10px 12px; border-radius: 8px;">
+              <b style="color: var(--accent-gold);">🥭 堅果與果乾：</b>
+              <ul style="margin: 4px 0 0 16px; padding: 0; font-size: 0.88rem; color: #E2E8F0;">
+                <li>Vinamit 綜合水果乾、芒果乾</li>
+                <li>帶皮鹽焙腰果（如 Ba Baz／億滋品牌包裝）</li>
+              </ul>
+            </div>
+
+            <div style="background: rgba(0,0,0,0.2); padding: 10px 12px; border-radius: 8px;">
+              <b style="color: var(--accent-gold);">🍰 特色零食與甜點：</b>
+              <ul style="margin: 4px 0 0 16px; padding: 0; font-size: 0.88rem; color: #E2E8F0;">
+                <li>黃龍綠豆糕</li>
+                <li>Tipo 雞蛋牛奶麵包乾</li>
+                <li>越南 Marou 精品巧克力</li>
+              </ul>
+            </div>
+
+            <div style="background: rgba(0,0,0,0.2); padding: 10px 12px; border-radius: 8px;">
+              <b style="color: var(--accent-gold);">🍜 越南泡麵：</b>
+              <ul style="margin: 4px 0 0 16px; padding: 0; font-size: 0.88rem; color: #E2E8F0;">
+                <li>Vifon 紫色包裝牛肉河粉</li>
+                <li>Hảo Hảo 粉紅包裝酸辣蝦麵</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img" src="https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=600&q=80" alt="專車送機">
+        </div>
+        <div class="card-content">
+          <div>
+            <span class="time-badge">13:00 – 18:15</span>
+            <h3 class="card-title">Airbnb 退房 & 專車送機返台</h3>
+            <p class="card-desc">13:00 返回 Airbnb 整理行李與檢查護照簽證，14:30 專車接送前往機場，預計 15:30 抵達辦理登機，搭乘 18:15 航班順利返家。</p>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Noi+Bai+International+Airport" target="_blank" class="btn-map">📍 機場位置地圖</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKLIST PANEL -->
+  <div id="checklist" class="panel">
+    <h2 class="section-title">📋 出發前行前準備清單</h2>
+    <div id="checklist-container"></div>
+  </div>
+
+  <!-- RULES PANEL -->
+  <div id="rules" class="panel">
+    <h2 class="section-title">📜 家族旅遊守則與公約</h2>
+    <div id="rules-container"></div>
+  </div>
+
+  <!-- MORE -->
+  <div id="more" class="panel">
+    <h2 class="section-title">🏰 備案景點與備註</h2>
+    <div class="ov-card">
+      <h3>Vincom Mega Mall Royal City</h3>
+      <p>河內最大地下複合商城，有真冰溜冰場與異國餐廳，適合雨天或高溫時的室內備案選擇。</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const CHECKLIST = [
+  {group:'📄 重要證件與文件', items:[
+    {t:'護照（建議效期 6 個月以上）', s:'請檢查護照有效期限，需自回程日起算至少 6 個月以上。'},
+    {t:'越南電子簽證 (E-visa)', s:'建議將核准後的 PDF 檔列印出紙本，並同時存入手機截圖備用。'},
+    {t:'來回機票證明（電子機票）', s:'入境審查時偶爾會抽查回程機票，請預先儲存截圖或列印紙本。'},
+    {t:'入境卡', s:'建議紙本與手機雲端各備份一份。'},
+  ]},
+  {group:'💳 金錢與通訊 setup', items:[
+    {t:'台幣現金／美金（當地換匯）', s:'越南市集與路邊小吃攤仍以越南盾 (VND) 為主。建議帶台幣或美金至當地銀樓換匯。'},
+    {t:'海外信用卡（至少 2 張）', s:'雖然刷卡普及率提高，建議準備雙卡備用，並預設開通海外刷卡與 Pin 碼。'},
+    {t:'越南 eSIM / SIM 卡', s:'建議在台灣預先買好 eSIM，下飛機即可掃描開通使用。', links:[
+      {t:'Klook eSIM 方案', u:'https://www.klook.com/zh-TW/activity/123902-vietnam-esim-high-speed-internet-qr-code-voucher/'},
+      {t:'蝦皮實體 SIM 卡', u:'https://shopee.tw/product/64327014/1058064533'}
+    ]},
+    {t:'Grab App 設定與綁卡', s:'務必在台灣預先下載並完成手機簡訊驗證，抵達當地即可直接綁定信用卡叫車。'},
+  ]},
+  {group:'🔌 電器與充電配備', items:[
+    {t:'萬用轉接頭', s:'越南常見 A 型（雙平頭，同台灣）與 C 型（雙圓頭）。建議帶萬用轉接頭更安心。'},
+    {t:'電壓注意 (220V)', s:'手機/筆電/相機充電器大多支援 100V-240V 全球電壓，可直接插。'},
+    {t:'美法電器警語（吹風機/電捲棒）', s:'若美髮電器僅支援 110V 切勿直接使用，否則會燒毀！請使用飯店吹風機或自備雙電壓款式。'},
+    {t:'行動電源', s:'出門在外全天導航與拍照必備（請注意需隨身攜帶，不可託運）。'},
+  ]},
+  {group:'👗 服裝與穿搭穿著', items:[
+    {t:'輕薄長袖羽織／罩衫', s:'室內冷氣強可保暖；進入寺院或古蹟（如文廟、皇城）若穿細肩帶/短褲會被視為不敬，可作遮蓋。'},
+    {t:'高係數防曬乳／墨鏡／帽子', s:'戶外活動與下龍灣遮陽必備，選擇防水防汗型防曬乳，帽子墨鏡也是拍照絕佳配件。'},
+    {t:'防水袋／備用衣物', s:'下龍灣一日遊含獨木舟、洞穴探險與划船體驗，衣物可能弄濕。'},
+  ]},
+  {group:'💊 衛生用品與個人常備藥', items:[
+    {t:'個人常備藥品', s:'胃腸藥（預防拉肚子必備）、感冒藥、止痛藥、OK 繃。'},
+    {t:'蚊蟲叮咬藥膏／防蚊液', s:'越南蚊子較兇。防蚊液亦可至當地超商購買當地品牌（如 Soffel 或曼秀雷敦 Remos）。'},
+    {t:'酒精棉片／濕紙巾', s:'體驗路邊攤小吃（如法國麵包、烤肉米線）前，先消毒雙手與餐具更安心。'},
+    {t:'隨身面紙', s:'部分當地公廁可能不提供衛生紙，隨身攜帶面紙維護衛生。'},
+    {t:'日常用品備註（當地可買）', s:'衛生棉、洗髮精、防蚊液等皆可於當地便利商店方便購入，無需帶過多。'},
+  ]},
+  {group:'🛡️ 保險與預訂憑證', items:[
+    {t:'海外旅遊平安險／不便險', s:'強烈建議投保包含海外突發醫療、行李損失與班機延誤之保障。'},
+    {t:'Klook / 飯店 / 餐廳預約單', s:'包含下龍灣一日遊接送、Pizza 4P\'s、Bespoke Hotel 與 Airbnb 地址截圖。'},
+    {t:'暈車／暈船藥', s:'往返下龍灣車程較長（約 2.5 小時）及搭船行程，容易暈車船者請提前準備。'},
+  ]}
+];
+
+const RULES = [
+  '行程以家庭安全、長輩與小朋友體力為優先；必要時可以刪景點，不硬跑。',
+  '當天集合時間跟從大家，避免全部的人等你一個。',
+  '有問題要馬上直接提出，不可以一直murmur偷偷抱怨，違規者要支付下一餐費用歐!',
+  '調皮的人晚上就……由13可以完全決定懲罰。',
+  '每天出門前確認：護照／手機／錢包／房卡／行動電源／水。',
+  '上車前先確認目的地地址，不確定就先給司機看 Google Maps 畫面。',
+  '餐廳、越式洗髮、按摩店尚未完全定案，表格內保留空白可手填。',
+];
+
+function switchTab(tabId) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+
+  const buttons = document.querySelectorAll('.tab-btn');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  
+  const activeBtn = Array.from(buttons).find(btn => btn.getAttribute('onclick').includes(tabId));
+  if (activeBtn) activeBtn.classList.add('active');
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function renderChecklist() {
+  const container = document.getElementById('checklist-container');
+  container.innerHTML = CHECKLIST.map(group => `
+    <div class="checklist-group">
+      <h3>📌 ${group.group}</h3>
+      ${group.items.map(item => `
+        <div class="check-item">
+          <input type="checkbox">
+          <div>
+            <div class="check-title">${item.t}</div>
+            <div class="check-sub">${item.s}</div>
+            ${item.links ? `
+              <div class="check-links">
+                🔗 相關連結：
+                ${item.links.map(link => `<a href="${link.u}" target="_blank">${link.t}</a>`).join('')}
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `).join('');
+}
+
+function renderRules() {
+  const container = document.getElementById('rules-container');
+  container.innerHTML = RULES.map((rule, idx) => `
+    <div class="rule-card">
+      <div class="rule-num">${idx + 1}</div>
+      <div class="rule-text">${rule}</div>
+    </div>
+  `).join('');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderChecklist();
+  renderRules();
+});
+</script>
+</body>
+</html>
